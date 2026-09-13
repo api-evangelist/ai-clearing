@@ -64,5 +64,37 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-AI Clearing is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+AI Clearing is an AI-native construction progress tracking and quality control company founded in
+2020, headquartered in Austin, Texas with an R&D center in Warsaw, Poland. Its CORE platform ingests
+drone imagery, ground-level mobile capture, CAD/BIM models and project schedules (including
+Primavera P6) and returns automated progress, productivity and quality analytics through interactive
+dashboards, a 3D digital twin and an agentic assistant (Clara), serving contractors and asset owners
+across solar, pipelines, transmission, highways, railways and airports.
+
+## API surface
+
+**No public API.** As of the 2026-09-13 enrichment pass, AI Clearing publishes no developer portal,
+API reference, SDK, CLI, MCP server, A2A agent card or machine-readable contract on any host it
+operates. Contract discovery was run against the marketing site, the CORE application host and the
+documentation host; the probe record is in
+[`well-known/ai-clearing-well-known.yml`](well-known/ai-clearing-well-known.yml).
+
+- `core.aiclearing.com` is the customer CORE application: a React single-page app that answers
+  HTTP 200 with the same shell for any unknown path and HTTP 403 from a Cloudflare bot challenge on
+  API-shaped paths.
+- `docs.aiclearing.com` resolves but does not answer public requests.
+- The [AI-Clearing GitHub organization](https://github.com/AI-Clearing) has three public repos, none
+  of them a client SDK: two computer-vision research repos and an unpublished internal fork of
+  MapLibre GL JS.
+
+## Links
+
+- Website: https://www.aiclearing.com/
+- About: https://www.aiclearing.com/about
+- Platform (CORE): https://www.aiclearing.com/platform-core
+- Case studies: https://www.aiclearing.com/case-studies
+- Blog: https://www.aiclearing.com/blog
+- Newsroom: https://www.aiclearing.com/news
+- Contact: https://www.aiclearing.com/contact
+- GitHub: https://github.com/AI-Clearing
+- LinkedIn: https://www.linkedin.com/company/ai-clearing/

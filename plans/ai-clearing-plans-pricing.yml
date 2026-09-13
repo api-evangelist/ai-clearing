@@ -1,0 +1,15 @@
+generated: '2026-09-13'
+method: searched
+source: https://www.aiclearing.com/sitemap.xml
+name: AI Clearing plans and pricing
+plan_count: 0
+currency: null
+plans: []
+note: 'AI Clearing publishes no pricing or plans page. https://www.aiclearing.com/pricing returns HTTP 404 and the published sitemap (https://www.aiclearing.com/sitemap.xml, HTTP 200, 54 URLs) contains no pricing, plans or packages page. Every commercial path on the site is a sales motion: a 15-minute demo booking calendar (https://www.aiclearing.com/calendar-15-min-demo, HTTP 200), a 30-minute tour contact form, and a contact form. This is an enterprise contact-us-only company with no self-serve tier and no published rate card.'
+evidence:
+- url: https://www.aiclearing.com/pricing
+  status: 404
+- url: https://www.aiclearing.com/sitemap.xml
+  status: 200
+- url: https://www.aiclearing.com/calendar-15-min-demo
+  status: 200

@@ -1,0 +1,96 @@
+generated: '2026-09-13'
+method: probed
+source: 'Direct HTTP probe of the named /.well-known path list on every host this record knows: www.aiclearing.com (registrable domain + www), core.aiclearing.com (the CORE customer application), docs.aiclearing.com (a documentation host that resolves but does not answer). No baseURL or OpenAPI servers[] host exists for this company because no API contract was found.'
+name: AI Clearing well-known probe
+summary: No /.well-known document is served on any AI Clearing host. The marketing site (Webflow) answers 404 with an "Invalid .well-known" error page; the CORE application answers 200 with its single-page-app shell for every path, which is a soft-404 and NOT a document. No WellKnown or SecurityTxt pointer is emitted.
+hosts:
+- host: www.aiclearing.com
+  note: Webflow-hosted marketing site. Every /.well-known path returns HTTP 404 with the body "Invalid .well-known".
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: core.aiclearing.com
+  note: 'SOFT-404 HOST. The CORE React single-page app returns HTTP 200 with an identical 867-byte HTML shell (<title>AI Clearing Core</title>) for every /.well-known path. Per the pipeline rule, a 200 returning an SPA shell is NOT a document and is recorded as a miss. Non-SPA paths (/openapi.json, /api/openapi.json, /swagger.json, /graphql, /docs) return HTTP 403 from a Cloudflare bot challenge (cf-mitigated: challenge).'
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    result: soft-404-spa-shell
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    result: soft-404-spa-shell
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    result: soft-404-spa-shell
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: null
+    result: soft-404-spa-shell
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    result: soft-404-spa-shell
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    result: soft-404-spa-shell
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    result: soft-404-spa-shell
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    result: soft-404-spa-shell
+- host: docs.aiclearing.com
+  note: 'Resolves to 129.158.44.122 (Oracle Cloud). One request early in the run returned a 4,450-byte JavaScript application shell (<html lang="en" dir="ltr">) before the connection dropped; every subsequent request from this run timed out on TCP connect to port 443 (and to port 80), and an independent fetch from a second network path was refused (ECONNREFUSED). No document was retrievable.'
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    file: null
+    result: connect-timeout
+  - path: /.well-known/agent-card.json
+    status: 0
+    file: null
+    result: connect-timeout
+  - path: /.well-known/agent.json
+    status: 0
+    file: null
+    result: connect-timeout
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+    file: null
+    result: connect-timeout
+robots:
+- host: www.aiclearing.com
+  url: https://www.aiclearing.com/robots.txt
+  status: 200
+  note: One line only - a sitemap reference. No AI-crawler directives and no Content-Signal.
+- host: core.aiclearing.com
+  url: https://core.aiclearing.com/robots.txt
+  status: 200
+  note: 'Cloudflare-managed block. Declares Content-Signal: search=yes,ai-train=no,use=reference for User-agent *, and Disallow: / for Amazonbot, Applebot-Extended, Bytespider, CCBot, ClaudeBot, CloudflareBrowserRenderingCrawler, Google-Extended, GPTBot and meta-externalagent. Recorded as an observed consent signal; no ContentSignal pointer is emitted because these are Cloudflare managed defaults on the application host rather than a document the company authored and serves at a /.well-known path.'
+agent_card:
+  found: false
+  note: Probed /.well-known/agent-card.json and /.well-known/agent.json on all three hosts. No hit. Per the pipeline contract nothing is written to a2a/ and no AgentCard pointer is emitted.

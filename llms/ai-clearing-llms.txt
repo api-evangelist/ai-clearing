@@ -1,0 +1,83 @@
+# AI Clearing
+
+> AI-native construction progress tracking and quality control. AI Clearing turns drone imagery,
+> ground-level mobile capture, CAD/BIM models and project schedules into automated progress,
+> productivity and quality analytics for contractors and asset owners in solar, pipelines,
+> transmission, highways, railways and airports. Founded 2020. HQ Austin, Texas; R&D center in
+> Warsaw, Poland.
+
+Provenance: generated 2026-09-13 by the API Evangelist enrichment pipeline from this repository's
+apis.yml and probe artifacts. AI Clearing does not publish an llms.txt of its own
+(https://www.aiclearing.com/llms.txt returns HTTP 404). This file is a third-party summary, not a
+document served by the company.
+
+## API surface
+
+AI Clearing publishes **no public API**. As of 2026-09-13 there is no developer portal, no API
+reference, no SDK, no CLI, no MCP server, no A2A agent card and no machine-readable contract
+(OpenAPI, AsyncAPI, GraphQL SDL, Protobuf, WSDL or OGC GetCapabilities) on any host the company
+operates. Contract discovery was run against the marketing site, the CORE application host and the
+documentation host; see well-known/ai-clearing-well-known.yml for the full probe record.
+
+- The CORE customer application (https://core.aiclearing.com/) is a React single-page app. It
+  answers HTTP 200 with the same 867-byte shell for any unknown path, and HTTP 403 from a
+  Cloudflare bot challenge on API-shaped paths. It is a customer login, not a public API.
+- https://docs.aiclearing.com/ resolves (Oracle Cloud, 129.158.44.122) but does not answer public
+  requests: one JavaScript app shell arrived before the connection dropped, and every subsequent
+  request timed out or was refused.
+
+## Product
+
+- [CORE platform](https://www.aiclearing.com/platform-core): automated progress tracking against
+  schedule, a 3D digital twin down to individual piles, and Clara, an agentic AI assistant that
+  answers questions against live project data. Ingests visual data, CAD/BIM models and Primavera P6
+  schedules.
+- [Construction monitoring](https://www.aiclearing.com/construction-monitoring)
+- [Quality control](https://www.aiclearing.com/quality-control)
+- [Progress tracking](https://www.aiclearing.com/platform/progress-tracking)
+- [Productivity monitoring](https://www.aiclearing.com/platform/productivity-monitoring)
+- [Quality and issues management](https://www.aiclearing.com/platform/quality-and-issues-management)
+- [Site management](https://www.aiclearing.com/platform/site-management)
+- [Invoice clearing](https://www.aiclearing.com/platform/invoice-clearing)
+- [Maintenance](https://www.aiclearing.com/platform/maintenance)
+- [Strategic management](https://www.aiclearing.com/platform/strategic-management)
+- [Legal and insurance support](https://www.aiclearing.com/platform/legal-and-insurance-support)
+
+## Company
+
+- [Website](https://www.aiclearing.com/)
+- [About](https://www.aiclearing.com/about)
+- [Case studies](https://www.aiclearing.com/case-studies)
+- [Blog](https://www.aiclearing.com/blog)
+- [News](https://www.aiclearing.com/news)
+- [Contact](https://www.aiclearing.com/contact)
+- [GitHub organization](https://github.com/AI-Clearing) - three public repositories, none of them a
+  client SDK: two computer-vision research repos (PoliteTeacher, n-cps) and an internal fork of
+  MapLibre GL JS that is not published to any package registry.
+- [LinkedIn](https://www.linkedin.com/company/ai-clearing/)
+
+## Certifications
+
+Published on the About page and in first-party news: ISO/IEC 42001 (AI management system, certified
+by SGS), ISO/IEC 5259-3 (AI data quality), plus quality-management, health-and-safety and
+information-security certifications whose standard numbers are shown as badge images rather than
+stated in text. See conformance/ai-clearing-conformance.yml.
+
+## Commercial
+
+No published pricing. Enterprise contact-us only: https://www.aiclearing.com/pricing is HTTP 404
+and the sitemap has no pricing page. Entry is a booked demo
+(https://www.aiclearing.com/calendar-15-min-demo).
+
+## Legal
+
+- [Terms of use](https://www.aiclearing.com/terms-of-use)
+- [Privacy policy](https://www.aiclearing.com/privacy-policy)
+
+## Agent access notes
+
+- robots.txt on the marketing host declares only a sitemap.
+- robots.txt on the CORE application host is Cloudflare-managed and declares
+  `Content-Signal: search=yes,ai-train=no,use=reference`, with `Disallow: /` for Amazonbot,
+  Applebot-Extended, Bytespider, CCBot, ClaudeBot, CloudflareBrowserRenderingCrawler,
+  Google-Extended, GPTBot and meta-externalagent.

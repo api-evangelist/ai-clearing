@@ -1,0 +1,13 @@
+generated: '2026-09-13'
+method: searched
+source: https://www.aiclearing.com/sitemap.xml
+name: AI Clearing rate limits
+limit_count: 0
+limits: []
+headers: []
+note: 'No rate limits are published because no public API is published. Contract discovery found no developer portal, no API reference and no machine-readable contract on any AI Clearing host, so there is no documented quota, window, burst, exhaustion status code or RateLimit/X-RateLimit/Retry-After response header to record. Nothing was observed on a live response either: the only API-shaped host, core.aiclearing.com, answers HTTP 403 from a Cloudflare bot challenge on every non-SPA path.'
+evidence:
+- url: https://www.aiclearing.com/sitemap.xml
+  status: 200
+- url: https://core.aiclearing.com/openapi.json
+  status: 403
