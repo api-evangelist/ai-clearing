@@ -23,7 +23,7 @@ tags:
 - Construction
 - Construction Technology
 - Artificial Intelligence
-- Computer-Vision
+- Computer Vision
 - Drones
 - Geospatial
 - Digital Twin
@@ -44,6 +44,7 @@ tags_raw:
 - Quality Control
 - Renewable Energy
 - Infrastructure
+- Computer-Vision
 apis: []
 maintainers:
 - FN: Kin Lane
