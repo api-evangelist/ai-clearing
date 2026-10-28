@@ -64,37 +64,96 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-AI Clearing is an AI-native construction progress tracking and quality control company founded in
-2020, headquartered in Austin, Texas with an R&D center in Warsaw, Poland. Its CORE platform ingests
-drone imagery, ground-level mobile capture, CAD/BIM models and project schedules (including
-Primavera P6) and returns automated progress, productivity and quality analytics through interactive
-dashboards, a 3D digital twin and an agentic assistant (Clara), serving contractors and asset owners
-across solar, pipelines, transmission, highways, railways and airports.
+AI Clearing is an AI-native construction progress tracking and quality control company founded in 2020, headquartered in Austin, Texas with an R&D center in Warsaw, Poland. Its CORE platform ingests drone imagery, ground-level mobile capture, CAD/BIM models and project schedules (including Primavera P6) and returns automated progress, productivity and quality analytics through interactive dashboards, a 3D digital twin and an agentic assistant (Clara), serving contractors and asset owners across solar, pipelines, transmission, highways, railways and airports. As of this profiling round the company publishes no public developer program, API reference or machine-readable contract: the CORE application at core.aiclearing.com is a customer-only single-page app behind a Cloudflare bot challenge, and docs.aiclearing.com does not answer public requests.
 
-## API surface
+**Areas:** Company · Construction · Construction Technology · Artificial Intelligence · Computer Vision · Drones · Geospatial · Digital Twin · Progress Tracking · Quality Control · Renewable Energy · Infrastructure
 
-**No public API.** As of the 2026-09-13 enrichment pass, AI Clearing publishes no developer portal,
-API reference, SDK, CLI, MCP server, A2A agent card or machine-readable contract on any host it
-operates. Contract discovery was run against the marketing site, the CORE application host and the
-documentation host; the probe record is in
-[`well-known/ai-clearing-well-known.yml`](well-known/ai-clearing-well-known.yml).
+## AI Clearing on APIs.io
 
-- `core.aiclearing.com` is the customer CORE application: a React single-page app that answers
-  HTTP 200 with the same shell for any unknown path and HTTP 403 from a Cloudflare bot challenge on
-  API-shaped paths.
-- `docs.aiclearing.com` resolves but does not answer public requests.
-- The [AI-Clearing GitHub organization](https://github.com/AI-Clearing) has three public repos, none
-  of them a client SDK: two computer-vision research repos and an unpublished internal fork of
-  MapLibre GL JS.
+Everything profiled for AI Clearing is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/ai-clearing/](https://apis.io/providers/ai-clearing/)** — or go straight to one of the APIs or properties below.
 
-## Links
+### Published properties
 
-- Website: https://www.aiclearing.com/
-- About: https://www.aiclearing.com/about
-- Platform (CORE): https://www.aiclearing.com/platform-core
-- Case studies: https://www.aiclearing.com/case-studies
-- Blog: https://www.aiclearing.com/blog
-- Newsroom: https://www.aiclearing.com/news
-- Contact: https://www.aiclearing.com/contact
-- GitHub: https://github.com/AI-Clearing
-- LinkedIn: https://www.linkedin.com/company/ai-clearing/
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Ai Clearing Domain Security](https://apis.io/security/ai-clearing/ai-clearing-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Ai Clearing Plans Pricing](https://apis.io/plans/ai-clearing/ai-clearing-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Ai Clearing Rate Limits](https://apis.io/rate-limits/ai-clearing/ai-clearing-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.aiclearing.com/)
+- [Support](https://www.aiclearing.com/contact)
+- [Blog](https://www.aiclearing.com/blog)
+- [Terms of service](https://www.aiclearing.com/terms-of-use)
+- [Privacy policy](https://www.aiclearing.com/privacy-policy)
+- [GitHub](https://github.com/AI-Clearing)
+
+## API Evangelist rating
+
+**Kin Score 17.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 56.3 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 35.5 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 18.5** — Energy & Utilities
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/ai-clearing/](https://apis.io/providers/ai-clearing/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for AI Clearing: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/ai-clearing/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
