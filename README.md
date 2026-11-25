@@ -80,19 +80,19 @@ Each property below is a page on APIs.io carrying the machine-readable artifact 
 
 Authentication, trust centre, and vulnerability disclosure.
 
-- [Ai Clearing Domain Security](https://apis.io/security/ai-clearing/ai-clearing-domain-security/)
+- [AI Clearing Domain Security](https://apis.io/security/ai-clearing/ai-clearing-domain-security/)
 
 #### Plans and pricing (1)
 
 Published plans, tiers and prices.
 
-- [Ai Clearing Plans Pricing](https://apis.io/plans/ai-clearing/ai-clearing-plans-pricing/)
+- [AI Clearing Plans Pricing](https://apis.io/plans/ai-clearing/ai-clearing-plans-pricing/)
 
 #### Rate limits (1)
 
 Published request limits.
 
-- [Ai Clearing Rate Limits](https://apis.io/rate-limits/ai-clearing/ai-clearing-rate-limits/)
+- [AI Clearing Rate Limits](https://apis.io/rate-limits/ai-clearing/ai-clearing-rate-limits/)
 
 ## Where to find this API
 
@@ -107,16 +107,16 @@ Links to the company's own pages. This repository publishes no copy of their spe
 
 ## API Evangelist rating
 
-**Kin Score 17.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+**Kin Score 19.8** — emerging · rubric 0.28.1 · scored 2026-11-21
 
 | Facet | Score |
 |---|---|
-| Discoverability | 56.3 |
+| Discoverability | 57.1 |
 | Contract quality | 0.0 |
 | Contract governance | 18.2 |
-| Operational transparency | 2.6 |
+| Operational transparency | 4.8 |
 | Developer ergonomics | 7.1 |
-| Access clarity | 35.5 |
+| Access clarity | 48.9 |
 
 **Agent readiness 2.5** — human-only
 
@@ -141,8 +141,14 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Protected Resource Metadata | — |
 | Dynamic Client Registration | — |
 | Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+| MCP Tool Quality | na |
+| Onboarding Descriptor | — |
+| Dns Aid Index | na |
+| Markdown Negotiation | na |
 
-**Regulatory alignment 18.5** — Energy & Utilities
+**Regulatory alignment 13.8** — Energy & Utilities
 
 The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/ai-clearing/](https://apis.io/providers/ai-clearing/).
 
